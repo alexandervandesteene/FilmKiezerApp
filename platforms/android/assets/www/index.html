@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Filmkiezer</title>
+		<link rel="stylesheet" href="css/jquery-mobile.css">
+		<script  src="js/lib/jquery.js"></script>
+  		<script  src="js/lib/jquery-mobile.js"></script>
+
+  		<script src="js/index.js"></script>
+  		<script type="text/javascript" src="cordova.js"></script>
+	</head>
+	<body>
+		<div id="filmlist" data-role="page">
+    			<div data-role="panel" id="mypanel2" data-display="overlay">
+    				<div data-role="header" data-theme="a">
+	            		<h1>Menu</h1>
+	        		</div><!-- /header -->
+	        		<div data-role="main" class="ui-content">
+		        		<a href="#filmlist" class="ui-btn">filmlijst</a>
+		        		<a href="#filmtoevoegen" class="ui-btn">film toevoegen</a>
+		        		<a href="#kiesfilm" class="ui-btn">kiesfilm </a>  		
+	        		</div>
+				</div><!-- /panel -->
+			<div data-role="header" data-position="inline">
+				<a href="#mypanel2" data-icon="bars">Menu</a>
+				<h1>lijst Films</h1>
+			</div>
+			<div data-role="content">
+
+				<ul id="movielist" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="search for video">
+				</ul>
+				
+			</div>
+		</div>
+
+    	<div data-role="page" id="filmtoevoegen">
+    			<div data-role="panel" id="mypanel" data-display="overlay">
+    				<div data-role="header" data-theme="a">
+	            		<h1>Menu</h1>
+	        		</div><!-- /header -->
+	        		<div data-role="main" class="ui-content">
+		        		<a href="#filmlist" class="ui-btn">filmlijst</a>
+		        		<a href="#filmtoevoegen" class="ui-btn">film toevoegen</a>
+		        		<a href="#kiesfilm" class="ui-btn">kiesfilm </a>  		
+	        		</div>
+				</div><!-- /panel -->
+	        <div data-role="header" data-theme="a">
+	        	<a href="#mypanel" data-icon="bars">Menu</a>
+	            <h1>film toevoegen</h1>
+	        </div><!-- /header -->
+
+	        <div role="main" class="ui-content">
+
+	            <h3>voeg film toe</h3>
+
+	            <label for="filmnaam">film naam</label>
+
+	            <input type="text" name="filmnaam" id="filmnaam" value="">
+
+	            <a data-role="button" href="#" id="toevoegen">toevoegen</a>
+
+	        </div><!-- /content -->
+
+    	</div><!-- /page -->
+    	<div data-role="page" id="kiesfilm">
+    				<div data-role="panel" id="mypanel1" data-display="overlay">
+    				<div data-role="header" data-theme="a">
+	            		<h1>Menu</h1>
+	        		</div><!-- /header -->
+	        		<div data-role="main" class="ui-content">
+		        		<a href="#filmlist" class="ui-btn">filmlijst</a>
+		        		<a href="#filmtoevoegen" class="ui-btn">film toevoegen</a>
+		        		<a href="#kiesfilm" class="ui-btn">kiesfilm </a>  		
+	        		</div>
+				</div><!-- /panel -->
+	        <div data-role="header" data-theme="a">
+	        	<a href="#mypanel1" data-icon="bars">Menu</a>
+	            <h1>radom film</h1>
+	        </div><!-- /header -->
+
+	        <div role="main" class="ui-content">
+
+	            <h3>kies film</h3>
+
+	            <a data-role="button" id="gooi">gooi dobbelsteen</a>
+
+	            <label id="gekozenfilm"></label>
+
+	            <a data-role="button" id="verwijder">verwijderen</a>
+
+	        </div><!-- /content -->
+
+    	</div><!-- /page -->
+
+	</body>
+</html>
